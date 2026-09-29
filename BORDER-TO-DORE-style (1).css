@@ -1,0 +1,128 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Noto Sans Bengali","Noto Sans",sans-serif;color:#101828;background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1160px,92%);margin:auto}
+.announcement{background:#101828;color:#fff;text-align:center;padding:7px;font-size:12px;font-weight:700}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #edf0f4}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:22px;font-weight:950;letter-spacing:.6px;line-height:1}
+.brand span{color:#e86a1c}
+.brand small{display:block;font-size:8px;letter-spacing:2.5px;color:#98a2b3;margin-top:5px}
+nav{display:flex;gap:27px;font-size:14px;font-weight:800}
+nav a:hover{color:#e86a1c}
+.menu{display:none;border:0;background:none;font-size:27px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:13px 20px;font-weight:900;cursor:pointer}
+.orange{background:#e86a1c;color:#fff;box-shadow:0 9px 24px #e86a1c2d}
+.light{background:#fff;border:1px solid #dfe3ea}
+.hero{background:radial-gradient(circle at 82% 20%,#ffd9bf66,transparent 28%),linear-gradient(135deg,#fff 0,#fff9f5 100%);padding:78px 0}
+.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.pill{display:inline-block;background:#fff0e5;border:1px solid #ffd4b9;color:#b54e0e;border-radius:999px;padding:7px 12px;font-size:11px;font-weight:950;letter-spacing:1.3px;margin-bottom:17px}
+h1{font-size:clamp(42px,5.3vw,68px);line-height:1.04;letter-spacing:-2.5px;margin-bottom:21px}
+h1 strong{color:#e86a1c}
+.lead{font-size:17px;color:#667085;max-width:650px;margin-bottom:27px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.platforms{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}
+.platforms span{background:#fff;border:1px solid #e4e7ec;border-radius:8px;padding:7px 10px;font-size:12px;font-weight:800}
+.heroVisual{min-height:410px;background:#101828;border-radius:30px;position:relative;overflow:hidden;padding:45px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 30px 70px #10182824}
+.glow{position:absolute;width:300px;height:300px;border-radius:50%;background:#e86a1c44;filter:blur(3px);right:-70px;top:-100px}
+.routeCard{position:relative;display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
+.country{background:#ffffff12;border:1px solid #ffffff20;border-radius:20px;padding:27px 15px;text-align:center;color:#fff}
+.country i{display:block;font-size:48px;font-style:normal}
+.country b{display:block;font-size:16px;margin-top:8px}
+.country small{color:#b8c0ce;font-size:11px}
+.routeArrow{color:#ff9a61;font-size:28px;font-weight:900}
+.miniOffer{margin-top:18px;position:relative;background:#fff;border-radius:16px;padding:16px 18px}
+.miniOffer b{display:block}
+.miniOffer span{font-size:12px;color:#667085}
+.trust{border-bottom:1px solid #edf0f4;background:#fff}
+.trustGrid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trustGrid div{padding:23px 18px;border-right:1px solid #edf0f4}
+.trustGrid div:last-child{border:0}
+.trustGrid b,.trustGrid span{display:block}
+.trustGrid b{font-size:13px}
+.trustGrid span{font-size:11px;color:#98a2b3}
+section{padding:78px 0}
+.head{text-align:center;max-width:720px;margin:0 auto 38px}
+.head.left{text-align:left;margin-left:0}
+.head>span{color:#e86a1c;font-size:11px;font-weight:950;letter-spacing:1.7px}
+.head h2{font-size:clamp(29px,4vw,43px);line-height:1.12;margin:7px 0 10px}
+.head p{color:#667085}
+.productGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.product{background:#fff;border:1px solid #e9ebef;border-radius:20px;overflow:hidden;box-shadow:0 12px 35px #1018280a;transition:.25s}
+.product:hover{transform:translateY(-5px);box-shadow:0 20px 45px #10182814}
+.productArt{height:190px;display:grid;place-items:center;font-size:76px}
+.beauty{background:linear-gradient(135deg,#ffe9df,#fff5f0)}
+.perfume{background:linear-gradient(135deg,#ede3f9,#faf7ff)}
+.fashion{background:linear-gradient(135deg,#e6efff,#f8fbff)}
+.care{background:linear-gradient(135deg,#dff5ed,#f7fffc)}
+.productBody{padding:20px}
+.productBody small{font-size:10px;font-weight:950;letter-spacing:1.3px;color:#98a2b3}
+.productBody h3{font-size:18px;margin:5px 0}
+.productBody p{font-size:13px;color:#667085;min-height:43px}
+.orderLink{display:inline-block;color:#e86a1c;font-size:13px;font-weight:900;margin-top:12px}
+.darkOffer{padding:58px 0;background:#101828;color:#fff}
+.offerGrid{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.orangeText{color:#ff9a61;font-weight:950;letter-spacing:1.5px;font-size:11px}
+.offerGrid h2{font-size:clamp(30px,4vw,45px);line-height:1.12;margin:7px 0 12px}
+.offerGrid p{color:#b9c1ce}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{border:1px solid #e7e9ee;border-radius:19px;padding:25px;background:#fff}
+.step em{display:grid;place-items:center;width:42px;height:42px;background:#fff0e5;color:#e86a1c;border-radius:12px;font-style:normal;font-weight:950;margin-bottom:17px}
+.step h3{font-size:18px;margin-bottom:6px}
+.step p{font-size:13px;color:#667085}
+.soft{background:#f7f8fa}
+.catGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.catGrid a{min-height:165px;background:#fff;border:1px solid #e7e9ee;border-radius:20px;padding:23px;display:flex;flex-direction:column;justify-content:end;transition:.2s}
+.catGrid a:hover{transform:translateY(-4px);border-color:#ffc6a5}
+.catGrid a:first-child{background:#fff3ee}
+.catGrid a:nth-child(2){background:#f7f0ff}
+.catGrid a:nth-child(3){background:#eef5ff}
+.catGrid a:nth-child(4){background:#edfbf5}
+.catGrid a{font-size:35px}
+.catGrid b{font-size:19px;margin-top:7px}
+.catGrid small{font-size:12px;color:#667085}
+.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
+.contactInfo{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.contactInfo div{border:1px solid #e7e9ee;border-radius:15px;padding:16px;font-size:20px}
+.contactInfo b,.contactInfo span{display:block;font-size:12px}
+.contactInfo span{color:#667085}
+.form{background:#fff;border:1px solid #e7e9ee;border-radius:22px;padding:25px;box-shadow:0 15px 45px #1018280a;display:grid;gap:12px}
+input,textarea{width:100%;padding:13px 14px;border:1px solid #dfe3ea;border-radius:10px;font:inherit;outline:none}
+textarea{min-height:115px;resize:vertical}
+input:focus,textarea:focus{border-color:#e86a1c}
+footer{background:#0b1220;color:#c6ccd7}
+.footGrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:35px;padding:45px 0}
+.footGrid b{color:#fff;display:block;margin-bottom:10px}
+.footGrid a{display:block;font-size:13px;margin:6px 0}
+.footBrand{font-size:23px;font-weight:950;color:#fff}
+.copy{text-align:center;border-top:1px solid #263043;padding:18px;color:#8d98a9;font-size:12px}
+.floatWA{position:fixed;right:19px;bottom:19px;background:#16a34a;color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:27px;box-shadow:0 10px 25px #0003;z-index:30}
+@media(max-width:900px){
+ .heroGrid,.contactGrid{grid-template-columns:1fr}
+ .productGrid,.steps,.catGrid{grid-template-columns:repeat(2,1fr)}
+ .trustGrid{grid-template-columns:repeat(2,1fr)}
+ .trustGrid div:nth-child(2){border-right:0}
+ .trustGrid div{border-bottom:1px solid #edf0f4}
+ .navbtn{display:none}
+ nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:18px 4%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #eee}
+ .menu{display:block}
+ nav.open{display:flex}
+ .heroVisual{min-height:350px}
+ .contactInfo{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+ .hero{padding:52px 0}
+ .heroVisual{padding:20px}
+ .routeCard{gap:6px}
+ .country{padding:18px 7px}
+ .country i{font-size:38px}
+ .routeArrow{font-size:21px}
+ .productGrid,.steps,.catGrid{grid-template-columns:1fr}
+ .trustGrid{grid-template-columns:1fr}
+ .trustGrid div{border-right:0}
+ .offerGrid{flex-direction:column;align-items:flex-start}
+ .contactGrid{gap:30px}
+ .footGrid{grid-template-columns:1fr;gap:25px}
+ h1{letter-spacing:-1px}
+}
