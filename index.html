@@ -1,97 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BORDER TO DORE | India Shopping, আপনার দোরগোড়ায়</title>
-<meta name="description" content="BORDER TO DORE — India থেকে পছন্দের authentic products Bangladesh-এ sourcing ও delivery service.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BORDER TO DORE | India Shopping</title>
+<meta name="description" content="India Shopping — আপনার দোরগোড়ায় ভারতের পছন্দের পণ্য।">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="announcement">🇮🇳 India Shopping → 🇧🇩 Bangladesh &nbsp; | &nbsp; 30% দিয়ে eligible order confirm</div>
 
-<header>
-  <div class="wrap nav">
-    <a href="#home" class="brand">BORDER <span>TO DORE</span><small>INDIA SHOPPING</small></a>
-    <button id="menu" class="menu">☰</button>
-    <nav id="nav">
-      <a href="#home">Home</a><a href="#products">Products</a><a href="#how">How It Works</a><a href="#categories">Categories</a><a href="#contact">Contact</a>
-    </nav>
-    <a class="btn orange navbtn" href="https://wa.me/8801333162597?text=Hello%20BORDER%20TO%20DORE%2C%20আমি%20একটি%20product%20order%20করতে%20চাই।" target="_blank">WhatsApp Order</a>
-  </div>
+<header class="navbar">
+  <a class="logo" href="#home">BORDER <span>TO DORE</span></a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#how">How It Works</a>
+    <a href="#categories">Categories</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<main id="home">
-<section class="hero">
-  <div class="wrap heroGrid">
-    <div>
-      <div class="pill">✨ INDIA SHOPPING SERVICE</div>
-      <h1>ইন্ডিয়ার পছন্দের<br><strong>পণ্য এখন আপনার দোরগোড়ায়।</strong></h1>
-      <p class="lead">Amazon, Flipkart, Myntra, Meesho, Blinkitসহ supported India platforms থেকে আপনার পছন্দের পণ্য খুঁজুন—বাকিটা সামলাবে <b>BORDER TO DORE</b>।</p>
-          <div class="platforms">
-        <a href="https://www.amazon.in" target="_blank" rel="noopener">Amazon</a>
-        <a href="https://www.flipkart.com" target="_blank" rel="noopener">Flipkart</a>
-        <a href="https://www.myntra.com" target="_blank" rel="noopener">Myntra</a>
-        <a href="https://www.meesho.com" target="_blank" rel="noopener">Meesho</a>
-        <a href="https://blinkit.com" target="_blank" rel="noopener">Blinkit</a>
-      </div>
-      <div class="glow"></div>
-      <div class="routeCard">
-        <div class="country"><i>🇮🇳</i><b>INDIA</b><small>Product Sourcing</small></div>
-        <div class="routeArrow">→</div>
-        <div class="country"><i>🇧🇩</i><b>BANGLADESH</b><small>Doorstep Delivery</small></div>
-      </div>
-      <div class="miniOffer"><b>30% Partial Payment</b><span>Eligible orders-এর জন্য</span></div>
+<main>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <span class="badge">🇮🇳 India → 🇧🇩 Bangladesh</span>
+    <h1>India Shopping,<br><strong>আপনার দোরগোড়ায়।</strong></h1>
+    <p>Amazon, Flipkart, Myntra, Meesho, Blinkitসহ ভারতের জনপ্রিয় শপিং প্ল্যাটফর্ম থেকে আপনার পছন্দের পণ্য—আমরা পৌঁছে দেব বাংলাদেশে।</p>
+    <div class="hero-buttons">
+      <a class="btn primary" href="https://wa.me/8801333162597?text=Hello%20BORDER%20TO%20DORE%2C%20আমি%20একটি%20পণ্য%20অর্ডার%20করতে%20চাই।" target="_blank">WhatsApp Order</a>
+      <a class="btn secondary" href="#products">Shop Products</a>
     </div>
   </div>
-</section>
-
-<section class="trust">
- <div class="wrap trustGrid"><div><b>India Sourcing</b><span>পছন্দের product খুঁজে দিন</span></div><div><b>Link / Screenshot</b><span>সহজে inquiry করুন</span></div><div><b>Priority Support</b><span>Order process assistance</span></div><div><b>Bangladesh Delivery</b><span>Doorstep delivery support</span></div></div>
-</section>
-
-<section id="products">
- <div class="wrap">
-  <div class="head"><span>FEATURED COLLECTION</span><h2>জনপ্রিয় Product Categories</h2><p>আপনার পছন্দের product-এর জন্য সরাসরি inquiry করুন।</p></div>
-  <div class="productGrid">
-   <article class="product"><div class="productArt beauty">💄</div><div class="productBody"><small>BEAUTY</small><h3>Beauty & Cosmetics</h3><p>Skincare, makeup ও personal beauty products</p><a class="orderLink" href="#contact" data-product="Beauty & Cosmetics">Order Inquiry →</a></div></article>
-   <article class="product"><div class="productArt perfume">🌸</div><div class="productBody"><small>FRAGRANCE</small><h3>Perfume & Fragrance</h3><p>Men & women-এর premium fragrance collection</p><a class="orderLink" href="#contact" data-product="Perfume & Fragrance">Order Inquiry →</a></div></article>
-   <article class="product"><div class="productArt fashion">👗</div><div class="productBody"><small>FASHION</small><h3>Fashion & Lifestyle</h3><p>India-এর fashion ও lifestyle products</p><a class="orderLink" href="#contact" data-product="Fashion & Lifestyle">Order Inquiry →</a></div></article>
-   <article class="product"><div class="productArt care">🧴</div><div class="productBody"><small>PERSONAL CARE</small><h3>Personal Care</h3><p>Hair care, body care ও everyday essentials</p><a class="orderLink" href="#contact" data-product="Personal Care">Order Inquiry →</a></div></article>
+  <div class="hero-card">
+    <div class="flag-row"><span>🇮🇳</span><div></div><span>🇧🇩</span></div>
+    <h3>India to Bangladesh</h3>
+    <p>আপনার পছন্দ • আমাদের sourcing • আপনার ঠিকানায় delivery</p>
+    <div class="advance">৩৫% Advance Payment<br><small>Pre-Booking Highlight</small></div>
   </div>
- </div>
 </section>
 
-<section class="darkOffer">
- <div class="wrap offerGrid"><div><span class="orangeText">BORDER TO DORE</span><h2>আপনি শুধু পণ্যটি বাছুন।<br>আমরা sourcing process-এ পাশে আছি।</h2><p>Product link বা screenshot পাঠিয়ে price ও delivery details জেনে নিন।</p></div><a class="btn orange" href="https://wa.me/8801333162597?text=Hello%20BORDER%20TO%20DORE%2C%20আমি%20একটি%20product-এর%20price%20ও%20delivery%20details%20জানতে%20চাই।" target="_blank">WhatsApp করুন →</a></div>
-</section>
-
-<section id="how">
- <div class="wrap"><div class="head"><span>HOW IT WORKS</span><h2>মাত্র ৪টি সহজ ধাপ</h2><p>আপনার পছন্দের India product-এর জন্য inquiry থেকে delivery পর্যন্ত।</p></div>
- <div class="steps">
-  <div class="step"><em>01</em><h3>Product নির্বাচন</h3><p>India-এর supported platform থেকে পছন্দের product খুঁজুন।</p></div>
-  <div class="step"><em>02</em><h3>Link পাঠান</h3><p>WhatsApp-এ product link বা clear screenshot পাঠান।</p></div>
-  <div class="step"><em>03</em><h3>Quote & Confirm</h3><p>Price ও delivery details জানার পর eligible order confirm করুন।</p></div>
-  <div class="step"><em>04</em><h3>Delivery</h3><p>India sourcing process শেষে Bangladesh delivery-এর ব্যবস্থা করা হবে।</p></div>
- </div></div>
-</section>
-
-<section id="categories" class="soft">
- <div class="wrap"><div class="head"><span>SHOP BY CATEGORY</span><h2>আপনার পছন্দের Category</h2></div>
- <div class="catGrid"><a href="#contact">💄<b>Beauty</b><small>Skincare & Makeup</small></a><a href="#contact">🌸<b>Fragrance</b><small>Perfume & EDP</small></a><a href="#contact">👗<b>Fashion</b><small>Fashion & Lifestyle</small></a><a href="#contact">🧴<b>Care</b><small>Hair & Body Care</small></a></div></div>
-</section>
-
-<section id="contact">
- <div class="wrap contactGrid">
-  <div><div class="head left"><span>ORDER NOW</span><h2>আপনার product link পাঠান</h2><p>নিচের form পূরণ করলে WhatsApp-এ order inquiry message তৈরি হবে।</p></div>
-   <div class="contactInfo"><div>📲<b>WhatsApp</b><span>01333162597</span></div><div>☎️<b>Call</b><span>01333162697</span></div><div>🇮🇳➡️🇧🇩<b>Service</b><span>India Shopping → Bangladesh</span></div></div>
+<section class="platforms">
+  <p>Shop from popular Indian platforms</p>
+  <div class="platform-grid">
+    <a href="https://www.amazon.in/" target="_blank">Amazon</a>
+    <a href="https://www.flipkart.com/" target="_blank">Flipkart</a>
+    <a href="https://www.myntra.com/" target="_blank">Myntra</a>
+    <a href="https://www.meesho.com/" target="_blank">Meesho</a>
+    <a href="https://blinkit.com/" target="_blank">Blinkit</a>
   </div>
-  <form id="form" class="form"><input id="name" required placeholder="আপনার নাম"><input id="phone" required placeholder="WhatsApp / ফোন নম্বর"><input id="product" required placeholder="Product link / Product name"><textarea id="note" placeholder="অতিরিক্ত তথ্য (ঐচ্ছিক)"></textarea><button class="btn orange" type="submit">WhatsApp-এ Inquiry পাঠান</button></form>
- </div>
+</section>
+
+<section id="how" class="section">
+  <div class="section-head"><span>HOW IT WORKS</span><h2>অর্ডার করার সহজ ৪ ধাপ</h2></div>
+  <div class="steps">
+    <article><b>01</b><h3>পণ্য নির্বাচন করুন</h3><p>India-এর supported shopping platform থেকে আপনার পছন্দের পণ্য খুঁজুন।</p></article>
+    <article><b>02</b><h3>Link / Screenshot পাঠান</h3><p>পণ্যের লিংক অথবা ছবি WhatsApp/Inbox-এ পাঠান।</p></article>
+    <article><b>03</b><h3>অর্ডার কনফার্ম করুন</h3><p>মূল্য ও delivery charge জানার পর ৩৫% payment দিয়ে pre-booking করুন।</p></article>
+    <article><b>04</b><h3>পণ্য পৌঁছে যাবে</h3><p>India থেকে সংগ্রহ করে Bangladesh-এ আপনার ঠিকানায় পৌঁছে দেব।</p></article>
+  </div>
+</section>
+
+<section id="categories" class="section categories-section">
+  <div class="section-head"><span>PRODUCT CATEGORIES</span><h2>আপনার পছন্দের ক্যাটাগরি</h2></div>
+  <div id="categoryGrid" class="category-grid"></div>
+</section>
+
+<section id="products" class="section products-section">
+  <div class="section-head"><span>FEATURED PRODUCTS</span><h2>প্রতিটি ক্যাটাগরিতে পণ্য</h2><p>নিচের ডেমো পণ্যগুলো JavaScript-এর product list থেকে দেখানো হচ্ছে। নতুন পণ্য যোগ করতে <b>script.js</b>-এর তালিকায় একটি product entry যোগ করুন।</p></div>
+  <div class="filter-row" id="filterRow"></div>
+  <div id="productGrid" class="product-grid"></div>
+</section>
+
+<section class="prebook">
+  <div>
+    <span class="badge light">PRE-BOOKING</span>
+    <h2>মাত্র ৩৫% Advance Payment</h2>
+    <p>আপনার পছন্দের পণ্য pre-booking করে অর্ডার নিশ্চিত করুন।</p>
+  </div>
+  <a class="btn white" href="https://wa.me/8801333162597?text=Hello%20BORDER%20TO%20DORE%2C%20আমি%20Pre-Booking%20সম্পর্কে%20জানতে%20চাই।" target="_blank">Pre-Book on WhatsApp</a>
+</section>
+
+<section id="inquiry" class="section inquiry">
+  <div class="section-head"><span>QUICK INQUIRY</span><h2>পণ্যের লিংক পাঠান</h2></div>
+  <form onsubmit="sendInquiry(event)">
+    <input id="name" type="text" placeholder="আপনার নাম" required>
+    <input id="phone" type="tel" placeholder="মোবাইল নম্বর" required>
+    <input id="link" type="url" placeholder="Product Link (ঐচ্ছিক)">
+    <textarea id="message" placeholder="আপনার প্রয়োজন / Product details"></textarea>
+    <button class="btn primary" type="submit">WhatsApp-এ Inquiry পাঠান</button>
+  </form>
+</section>
+
+<section id="contact" class="contact">
+  <div><span>CONTACT</span><h2>BORDER TO DORE</h2><p>India Shopping, আপনার দোরগোড়ায় 🇮🇳➡️🇧🇩</p></div>
+  <div class="contact-info">
+    <a href="https://wa.me/8801333162597" target="_blank">WhatsApp: 01333162597</a>
+    <a href="tel:01333162697">Call: 01333162697</a>
+    <a href="https://www.facebook.com/share/19YbzSpBDH/" target="_blank">Facebook Page</a>
+  </div>
 </section>
 </main>
 
-<footer><div class="wrap footGrid"><div><div class="footBrand">BORDER TO DORE</div><p>India Shopping, আপনার দোরগোড়ায় 🇮🇳➡️🇧🇩</p></div><div><b>Explore</b><a href="#products">Products</a><a href="#how">How It Works</a><a href="#contact">Order</a></div><div><b>Contact</b><a href="https://wa.me/8801333162597" target="_blank">WhatsApp 01333162597</a><a href="tel:+8801333162697">Call 01333162697</a></div></div><div class="copy">© <span id="year"></span> BORDER TO DORE. All rights reserved.</div></footer>
-<a class="floatWA" href="https://wa.me/8801333162597" target="_blank">◉</a>
+<a class="floating-wa" href="https://wa.me/8801333162597?text=Hello%20BORDER%20TO%20DORE%2C%20আমি%20একটি%20পণ্য%20অর্ডার%20করতে%20চাই।" target="_blank" aria-label="WhatsApp">☘</a>
+
+<footer>© 2026 BORDER TO DORE • India Shopping</footer>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
