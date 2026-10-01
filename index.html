@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BORDER TO DORE | India Shopping</title>
+  <meta name="description" content="BORDER TO DORE — India থেকে সরাসরি বাংলাদেশে authentic products.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="topbar">🇮🇳 India Shopping — আপনার দোরগোড়ায় 🇧🇩</div>
+    <div class="nav">
+      <button class="icon-btn menu-btn" onclick="toggleMenu()">☰</button>
+      <a class="logo" href="#" onclick="goHome()">BORDER <span>TO DORE</span></a>
+      <div class="desktop-search">
+        <input id="searchInput" type="search" placeholder="আপনার পছন্দের পণ্য খুঁজুন..." oninput="searchProducts()">
+      </div>
+      <button class="cart-btn" onclick="openCart()">🛒 <span>Cart</span> <b id="cartCount">0</b></button>
+    </div>
+    <div class="mobile-search">
+      <input id="mobileSearchInput" type="search" placeholder="পণ্য খুঁজুন..." oninput="searchProducts(true)">
+    </div>
+    <nav id="menu" class="menu">
+      <a href="#" onclick="goHome()">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">All Products</a>
+      <a href="#about">About Us</a>
+      <a href="https://wa.me/8801333162597" target="_blank">WhatsApp Order</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <small>🇮🇳 INDIA → 🇧🇩 BANGLADESH</small>
+        <h1>ভারতের পছন্দের পণ্য<br><strong>এখন আপনার দোরগোড়ায়</strong></h1>
+        <p>Amazon, Flipkart, Myntra, Meesho, Blinkit সহ ভারতের পছন্দের প্ল্যাটফর্ম থেকে পণ্য আনুন BORDER TO DORE-এর মাধ্যমে।</p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn primary">Shop Now</a>
+          <a href="https://wa.me/8801333162597?text=Hello%20BORDER%20TO%20DORE%2C%20I%20want%20to%20order." target="_blank" class="btn light">WhatsApp Order</a>
+        </div>
+      </div>
+      <div class="hero-badge">ORIGINAL<br><small>& AUTHENTIC</small></div>
+    </section>
+
+    <section class="trust">
+      <div><b>🇮🇳</b><span>India Sourcing<br><small>পছন্দের পণ্য সংগ্রহ</small></span></div>
+      <div><b>✓</b><span>Authentic Products<br><small>Original products</small></span></div>
+      <div><b>🚚</b><span>Fast Delivery<br><small>India → Bangladesh</small></span></div>
+      <div><b>💬</b><span>Easy Order<br><small>WhatsApp support</small></span></div>
+    </section>
+
+    <section id="categories" class="section">
+      <div class="section-head"><div><span class="eyebrow">SHOP BY</span><h2>ক্যাটাগরি</h2></div><a href="#products">সব দেখুন →</a></div>
+      <div id="categoryGrid" class="category-grid"></div>
+    </section>
+
+    <section id="products" class="section products-section">
+      <div class="section-head">
+        <div><span class="eyebrow">BORDER TO DORE</span><h2 id="productTitle">জনপ্রিয় পণ্য</h2></div>
+        <select id="categoryFilter" onchange="filterCategory()">
+          <option value="all">সব ক্যাটাগরি</option>
+        </select>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <div id="noProducts" class="empty" hidden>কোনো পণ্য পাওয়া যায়নি।</div>
+    </section>
+
+    <section class="offer">
+      <div><span class="eyebrow">SPECIAL SERVICE</span><h2>আপনার পছন্দের যেকোনো Indian Product</h2><p>Product link বা ছবি পাঠান—আমরা India থেকে সংগ্রহ করে Bangladesh-এ পৌঁছে দেওয়ার প্রক্রিয়া সহজ করে দিই।</p></div>
+      <a class="btn dark" href="https://wa.me/8801333162597?text=Hello%20BORDER%20TO%20DORE%2C%20I%20have%20an%20Indian%20product%20link." target="_blank">Product Link পাঠান</a>
+    </section>
+
+    <section id="about" class="about section">
+      <div><span class="eyebrow">ABOUT US</span><h2>BORDER TO DORE</h2><p>India Shopping, আপনার দোরগোড়ায় 🇮🇳➡️🇧🇩</p></div>
+      <p>আপনি ভারতের পছন্দের online platform থেকে product বেছে নিন। Product link/photo আমাদের পাঠালে sourcing ও delivery process নিয়ে আমরা আপনাকে সহযোগিতা করব।</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">BORDER <span>TO DORE</span></div>
+    <p>India Shopping — আপনার দোরগোড়ায় 🇮🇳➡️🇧🇩</p>
+    <p>WhatsApp: <a href="https://wa.me/8801333162597" target="_blank">01333162597</a></p>
+    <small>© 2026 BORDER TO DORE. All rights reserved.</small>
+  </footer>
+
+  <div id="productModal" class="modal" onclick="closeModal(event)">
+    <div class="modal-card">
+      <button class="close" onclick="hideProduct()">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-head"><h2>Your Cart</h2><button onclick="closeCart()">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-bottom">
+      <div><span>Total</span><strong id="cartTotal">৳0</strong></div>
+      <button class="btn primary full" onclick="checkoutWhatsApp()">Order on WhatsApp</button>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay" onclick="closeCart()"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
