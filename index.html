@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BORDER TO DORE — India Shopping, আপনার দোরগোড়ায় 🇮🇳➡️🇧🇩">
+  <title>BORDER TO DORE | India Shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="BORDER TO DORE Home">
+        <span class="brand-mark">B2D</span>
+        <span><strong>BORDER TO DORE</strong><small>India Shopping 🇮🇳 → 🇧🇩</small></span>
+      </a>
+      <div class="nav-actions">
+        <button class="nav-btn" id="adminOpenBtn">⚙️ Admin</button>
+        <button class="cart-btn" id="cartOpenBtn">🛒 Cart <b id="cartCount">0</b></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">🇮🇳 INDIA SHOPPING → 🇧🇩 BANGLADESH</span>
+          <h1>ইন্ডিয়ার পছন্দের প্রোডাক্ট,<br><span>আপনার দোরগোড়ায়।</span></h1>
+          <p>Amazon, Flipkart, Myntra, Meesho, Blinkit সহ ভারতের বিভিন্ন প্ল্যাটফর্ম থেকে আপনার পছন্দের পণ্য অর্ডার করুন।</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#products">🛍️ Shop Now</a>
+            <a class="outline-btn" href="https://wa.me/8801333162597" target="_blank" rel="noopener">💬 WhatsApp Order</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="india">🇮🇳</div>
+          <div class="arrow">→</div>
+          <div class="bd">🇧🇩</div>
+          <strong>India to Bangladesh</strong>
+          <small>Original & Authentic Products</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop container" id="products">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">OUR COLLECTION</span>
+          <h2>জনপ্রিয় প্রোডাক্ট</h2>
+        </div>
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="প্রোডাক্ট খুঁজুন..." aria-label="Search products">
+          <span>🔍</span>
+        </div>
+      </div>
+
+      <div class="category-row" id="categoryRow"></div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state hidden" id="emptyProducts">এই ক্যাটাগরিতে কোনো প্রোডাক্ট পাওয়া যায়নি।</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>BORDER TO DORE</h3>
+        <p>India Shopping, আপনার দোরগোড়ায় 🇮🇳➡️🇧🇩</p>
+      </div>
+      <div>
+        <strong>Order & Support</strong>
+        <p>WhatsApp: <a href="https://wa.me/8801333162597" target="_blank" rel="noopener">01333162597</a></p>
+        <p>Call: <a href="tel:01333162697">01333162697</a></p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> BORDER TO DORE. All rights reserved.</div>
+  </footer>
+
+  <!-- Product Details Modal -->
+  <div class="modal hidden" id="productModal" role="dialog" aria-modal="true">
+    <div class="modal-card product-modal-card">
+      <button class="close-btn" data-close="productModal">×</button>
+      <div id="productDetails"></div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal hidden" id="cartModal" role="dialog" aria-modal="true">
+    <div class="modal-card cart-card">
+      <button class="close-btn" data-close="cartModal">×</button>
+      <h2>🛒 আপনার Cart</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">৳0</strong></div>
+      <button class="primary-btn full" id="cartWhatsAppBtn">💬 WhatsApp-এ Order করুন</button>
+    </div>
+  </div>
+
+  <!-- Admin Modal -->
+  <div class="modal hidden" id="adminModal" role="dialog" aria-modal="true">
+    <div class="modal-card admin-card">
+      <button class="close-btn" data-close="adminModal">×</button>
+      <div id="adminLogin">
+        <span class="section-kicker">STORE MANAGEMENT</span>
+        <h2>Admin Panel</h2>
+        <p class="muted">Product management খুলতে Admin PIN দিন।</p>
+        <input id="adminPin" class="form-input" type="password" inputmode="numeric" placeholder="Admin PIN">
+        <button class="primary-btn full" id="adminLoginBtn">Login</button>
+        <p class="tiny">Demo PIN: <b>1234</b> — GitHub Pages-এর public site-এ এটি নিরাপদ server-side authentication নয়।</p>
+      </div>
+
+      <div id="adminPanel" class="hidden">
+        <div class="admin-title-row">
+          <div>
+            <span class="section-kicker">STORE MANAGEMENT</span>
+            <h2>Product Manager</h2>
+          </div>
+          <button class="outline-btn" id="adminLogoutBtn">Logout</button>
+        </div>
+
+        <form id="productForm" class="admin-form">
+          <input type="hidden" id="productId">
+
+          <label>Product Name
+            <input class="form-input" id="productName" required placeholder="যেমন: Wild Stone CODE Perfume">
+          </label>
+
+          <label>Category
+            <select class="form-input" id="productCategory" required></select>
+          </label>
+
+          <label>Image URL
+            <input class="form-input" id="productImage" placeholder="https://...">
+          </label>
+
+          <div class="two-col">
+            <label>Regular Price (৳)
+              <input class="form-input" id="regularPrice" type="number" min="0" required placeholder="3000">
+            </label>
+            <label>Sale Price (৳)
+              <input class="form-input" id="salePrice" type="number" min="0" required placeholder="2750">
+            </label>
+          </div>
+
+          <label>Description
+            <textarea class="form-input" id="productDescription" rows="4" placeholder="Product details লিখুন..."></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="primary-btn" type="submit" id="saveProductBtn">➕ Add Product</button>
+            <button class="outline-btn hidden" type="button" id="cancelEditBtn">Cancel Edit</button>
+          </div>
+        </form>
+
+        <hr>
+        <div class="admin-list-head">
+          <h3>Products <span id="adminProductCount"></span></h3>
+          <button class="danger-btn" id="resetProductsBtn">Reset Demo Products</button>
+        </div>
+        <div id="adminProductList" class="admin-product-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
